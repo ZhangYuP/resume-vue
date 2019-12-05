@@ -10,7 +10,7 @@
       <li>
         <a href="#">作品
           <ul class="submenu">
-            <li v-for="(item, index) in portfolio" v-bind:key="index"><a href="">{{item}}</a></li> 
+            <li v-for="(item, index) in portfolio" v-bind:key="index"><a href="">{{item}}</a></li>
           </ul>
         </a>
       </li>
@@ -52,11 +52,6 @@
       left: 0; width: 100%;
     }
   }
-  .clearfix::after{
-    content: '';
-    display: block;
-    clear: both;
-  }
   nav{
     position: fixed;
     top: 0;
@@ -67,6 +62,7 @@
     width: 100%;
     padding: 20px;
     line-height: 40px;
+    z-index: 1;
     &.sticky{
       background-color: #ffffff;
       height: 60px;
