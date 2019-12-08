@@ -30,18 +30,17 @@
 
 <style scoped lang="scss">
   .experience{
-    %cell{
+    @mixin cell($width){
+      width: $width;
       float: left;
       padding: 5px 0;
     }
     dt{
-      width: 25%;
       font-weight: bold;
-      @extend %cell;
+      @include cell(25%);
     }
     dd{
-      width: 75%;
-      @extend %cell;
+      @include cell(75%);
     }
   }
 </style>

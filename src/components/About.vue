@@ -140,18 +140,17 @@
           margin: 15px 0;
         }
         dl{
-          %table{
+          @mixin cell($width){
+            width: $width;
             float: left;
-            padding: 5px;
+            padding: 5px 0;
           }
           dt{
-            @extend %table;
-            width: 12%;
+            @include cell(12%);
             font-weight: bold;
           }
           dd{
-            @extend %table;
-            width: 38%;
+            @include cell(38%);
           }
         }
         img{
