@@ -3,6 +3,7 @@
     <Nav />
     <Banner />
     <About />
+    <Skill />
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import Nav from './components/Nav'
 import Banner from './components/Banner'
 import About from './components/About'
+import Skill from './components/Skill'
 
 export default {
   name: 'app',
   components: {
     Nav,
     Banner,
-    About
+    About,
+    Skill
   }
 }
 </script>

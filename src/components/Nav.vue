@@ -63,6 +63,7 @@
     padding: 20px;
     line-height: 40px;
     z-index: 1;
+    transition: all 0.5s;
     &.sticky{
       background-color: #ffffff;
       height: 60px;
