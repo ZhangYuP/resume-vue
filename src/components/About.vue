@@ -1,5 +1,5 @@
 <template>
-  <section class="about">
+  <section class="about" id="about">
     <main class="clearfix">
       <div class="picture">
         <img src="../../public/zyp.jpg" width="260" height="260" alt="头像">
@@ -79,11 +79,9 @@
   $white: #ffffff;
   $grey: #cdcfd1;
   $red: #e6686a;
-  .about{
-    max-width: 940px;
-    margin: -350px auto 0;
+  #about{
+    margin: -360px auto 0;
     background-color: $white;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     main{
       padding: 50px;
       .picture{
@@ -191,7 +189,7 @@
             width: 0;
             height: 0;
             top: 25px;
-            left: 25px; 
+            left: 25px;
             opacity: 0;
             box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease-in;

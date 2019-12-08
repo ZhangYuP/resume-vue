@@ -53,17 +53,5 @@
 </script>
 
 <style scoped lang="scss">
-  .skill{
-    width: 940px;
-    margin: 30px auto;
-    > ol{
-      background: #ffffff;
-      padding: 25px 50px;
-      margin-top: 30px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-      > li{
-        padding: 10px 0;
-      }
-    }
-  }
+
 </style>
