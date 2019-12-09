@@ -1,5 +1,5 @@
 <template>
-  <section class="about" id="about">
+  <section id="about">
     <main class="clearfix">
       <div class="picture">
         <img src="../../public/zyp.jpg" width="260" height="260" alt="头像">

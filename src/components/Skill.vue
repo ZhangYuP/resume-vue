@@ -1,5 +1,5 @@
 <template>
-  <section class="skill">
+  <section id="skill">
     <h2>技能</h2>
     <ol>
       <li>

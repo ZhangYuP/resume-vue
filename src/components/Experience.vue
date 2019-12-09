@@ -1,5 +1,5 @@
 <template>
-  <section class="experience">
+  <section id="experience">
     <h2>经历</h2>
     <ol>
       <li>
@@ -29,7 +29,7 @@
 </script>
 
 <style scoped lang="scss">
-  .experience{
+  #experience{
     @mixin cell($width){
       width: $width;
       float: left;

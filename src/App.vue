@@ -5,15 +5,17 @@
     <About />
     <Skill />
     <Experience />
+    <Portfolio />
   </div>
 </template>
 
 <script>
-import Nav from './components/Nav'
-import Banner from './components/Banner'
-import About from './components/About'
-import Skill from './components/Skill'
-import Experience from "./components/Experience"
+import Nav from './components/Nav';
+import Banner from './components/Banner';
+import About from './components/About';
+import Skill from './components/Skill';
+import Experience from "./components/Experience";
+import Portfolio from "./components/Portfolio";
 
 export default {
   name: 'app',
@@ -22,7 +24,8 @@ export default {
     Banner,
     About,
     Skill,
-    Experience
+    Experience,
+    Portfolio
   }
 }
 </script>
