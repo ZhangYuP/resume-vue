@@ -37,10 +37,10 @@
     }
     dt{
       font-weight: bold;
-      @include cell(25%);
+      @include cell(23%);
     }
     dd{
-      @include cell(75%);
+      @include cell(77%);
     }
   }
 </style>

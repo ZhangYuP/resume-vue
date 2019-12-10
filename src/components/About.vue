@@ -112,8 +112,8 @@
       }
       .text{
         float: left;
-        margin-left: 80px;
-        width: 500px;
+        margin-left: 60px;
+        width: 480px;
         position: relative;
         #openHtml{
           display: none;
@@ -122,19 +122,19 @@
           font-size: 14px;
           font-weight: bold;
           line-height: 14px;
-          padding: 10px 20px;
+          padding: 15px 20px;
           border: 1px solid $grey;
           border-radius: 4px;
           position: absolute;
-          top: -5px;
+          top: 0;
           right: 0;
           &:hover{
             box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           }
         }
         h1{
-          margin-bottom: 20px;
-          font-weight: bold;
+          font-size: 34px;
+          margin-bottom: 10px;
         }
         hr{
           margin: 15px 0;

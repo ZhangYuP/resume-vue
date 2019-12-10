@@ -6,6 +6,7 @@
     <Skill />
     <Experience />
     <Portfolio />
+    <Message />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import About from './components/About';
 import Skill from './components/Skill';
 import Experience from "./components/Experience";
 import Portfolio from "./components/Portfolio";
+import Message from "./components/Message";
 
 export default {
   name: 'app',
@@ -25,7 +27,8 @@ export default {
     About,
     Skill,
     Experience,
-    Portfolio
+    Portfolio,
+    Message
   }
 }
 </script>
@@ -33,16 +36,22 @@ export default {
 <style lang="scss">
 #app {
   section {
-    width: 940px;
+    width: 900px;
     margin: 30px auto;
-    > ol {
+    %box{
       background: #ffffff;
       padding: 25px 50px;
       margin-top: 30px;
       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    }
+    > ol {
+      @extend %box;
       > li {
         padding: 10px 0;
       }
+    }
+    .messageboard{
+      @extend %box;
     }
   }
 }

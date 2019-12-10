@@ -108,7 +108,7 @@
 
 <style scoped lang="scss">
   #portfolio > ol > li{
-    padding: 15px 0;
+    padding: 20px 0;
   }
   img{
     float: left;
@@ -116,7 +116,7 @@
   }
   .description{
     float: left;
-    width: 480px;
+    width: 440px;
     margin-left: 60px;
     line-height: 1.5;
     position: relative;
