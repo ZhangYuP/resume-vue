@@ -2,8 +2,8 @@
   <section id="message">
     <h2>留言</h2>
     <div class="messageboard">
-      <MessageList ref="messageList" v-on:sendCount="updateCount"/>
-      <ol class="pages"></ol>
+      <Messagelist ref="messagelist" v-on:sendCount="updateCount"/>
+      <Pagination ref="pagination"/>
       <form>
         <div class="inputWrapper">
           <label for="name">姓名</label>
@@ -35,7 +35,9 @@
 <script>
   const AV = require('leancloud-storage')
 
-  import MessageList from './MessageList'
+  import Messagelist from './Messagelist'
+  import Pagination from './Pagination'
+
   export default {
     name: "Message",
     data(){
@@ -48,9 +50,10 @@
       }
     },
     components: {
-      MessageList
+      Messagelist,
+      Pagination
     },
-    
+
     methods: {
       save(id, name, content) {
         let Message = AV.Object.extend('Message')
@@ -79,9 +82,10 @@
         }
         this.save(this.id, this.name, this.content).then(message => {
           this.content = ''
-          this.$refs.messageList.loadMessages()
+          this.$refs.messagelist.loadMessages(parseInt(this.id / 10))
+          this.$refs.pagination.clickPage(parseInt(this.id / 10))
         })
-        
+
       },
       hide1(){
         this.warning1 = false
@@ -110,7 +114,7 @@
 
         label {
           margin: 10px 0;
-          padding: 5px;
+          padding: 5px 10px;
         }
 
         @mixin form {
@@ -144,7 +148,7 @@
         .warning {
           position: absolute;
           top: 16px;
-          right: 86px; 
+          right: 80px;
           color: red;
           font-size: 14px;
           svg {

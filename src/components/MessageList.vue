@@ -12,9 +12,10 @@
   const AV = require('leancloud-storage')
 
   export default {
-    name: "MessageList",
+    name: "Messagelist",
     data(){
       return {
+        allMessages: [],
         messages: []
       }
     },
@@ -26,18 +27,23 @@
     },
     mounted(){
       this.loadMessages()
-      
+      this.$eventBus.$on('changePage', page => this.showMessage(page))
     },
     methods: {
       fetch(){
         let query = new AV.Query('Message')
         return query.find()
       },
-      loadMessages(){
-        this.fetch().then(messages => {
-          this.messages = messages
-          this.$emit('sendCount', messages[messages.length - 1].attributes.id || 0)
+      loadMessages(page = 0){
+        this.fetch().then(allMessages => {
+          this.allMessages = allMessages
+          this.$emit('sendCount', allMessages[allMessages.length - 1].attributes.id || 0)
+          this.$eventBus.$emit('sendCount', allMessages[allMessages.length - 1].attributes.id || 0)
+          this.showMessage(page)
         })
+      },
+      showMessage(page = 0){
+        this.messages = this.allMessages.slice(page * 10, (page + 1) * 10)
       }
     }
   }
